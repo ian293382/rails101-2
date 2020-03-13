@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     @post.group = @group
     @post.user = current_user
 
-    if @gost.save
+    if @post.save
       redirect_to group_path(@group)
     else
       render :new
